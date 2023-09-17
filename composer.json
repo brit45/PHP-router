@@ -2,12 +2,12 @@
     "name": "root22/router",
     "description": "Router php",
     "license": "MIT",
+    "minimum-stability": "beta",
     "keywords": [
 	"php",
 	"router"
     ],
     "type":"project",
-    "version": "1.0.0-beta",
     "autoload": {
 
         "psr-4": {
@@ -26,6 +26,9 @@
             "url": "https://www.paypal.com/donate/?hosted_button_id=H732SBKZ88US6"
         }
     ],
+    "require": {
+	"php" : "^8.1"
+    },
     "require-dev": {
         "larapack/dd": "^1.1"
     }

@@ -1,0 +1,20 @@
+{
+    "name": "root22/router",
+    "description": "Router php",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Root22\\Router\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "brit45",
+            "email": "36789485+brit45@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "larapack/dd": "^1.1"
+    }
+}

@@ -2,7 +2,12 @@
     "name": "root22/router",
     "description": "Router php",
     "license": "MIT",
-    "version": "1.0.0",
+    "keywords": [
+	"php",
+	"router"
+    ],
+    "type":"project",
+    "version": "1.0.0-beta",
     "autoload": {
 
         "psr-4": {
@@ -13,6 +18,12 @@
         {
             "name": "brit45",
             "email": "36789485+brit45@users.noreply.github.com"
+        }
+    ],
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/donate/?hosted_button_id=H732SBKZ88US6"
         }
     ],
     "require-dev": {

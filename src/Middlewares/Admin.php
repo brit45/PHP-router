@@ -2,7 +2,8 @@
 
 namespace Root22\Router\Middlewares;
 
-class Admin extends Middleware {
+class Admin extends Middleware 
+implements MiddlewareInterface {
 
     public function validate() : bool {
 

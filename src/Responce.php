@@ -2,8 +2,14 @@
 
 namespace Root22\Router;
 
-use function PHPSTORM_META\type;
 
+
+/**
+ * Responce
+ * 
+ * @property mixed $data
+ * @property array $content
+ */
 class Responce {
 
     private $data;
@@ -15,7 +21,14 @@ class Responce {
         $this->Find_Headers();
         $this->GetResponce();
     }
-
+    
+    /**
+     * GetResponce
+     * 
+     * Show the responce.
+     *
+     * @return void
+     */
     private function GetResponce() {
 
         if(empty($this->content['body'])) {
@@ -25,7 +38,14 @@ class Responce {
         
         return printf($this->content['body']);
     }
-
+    
+    /**
+     * Find_Headers
+     * 
+     * Auto-detected header HTTP responce.
+     *
+     * @return void
+     */
     private function Find_Headers() {
 
         if(is_string($this->data)) {

@@ -17,13 +17,28 @@ class Request {
         $this->method();
         $this->getParams();
         
+        //! ---------------------------------------------------------
+        //!                                                       .
+        //! This Element is not Functionnel -- In development -- /!\
+        //!
+        //! ---------------------------------------------------------
+
         if(isset($_SESSION) || empty($_SESSION)) {
             
             $this->init_varaibles_session();
             $_SESSION = $this->session_data;
         }
-    }
 
+        //! ---------------------------------------------------------
+    }
+    
+    /**
+     * method
+     * 
+     * Detect the method of connection.
+     *
+     * @return void
+     */
     private function method() : void {
 
         if(isset($_POST['method']) && !empty($_POST['method'])) {
@@ -35,7 +50,14 @@ class Request {
             $this->method = strtoupper($_SERVER['REQUEST_METHOD']);
         }
     }
-
+    
+    /**
+     * getParams
+     * 
+     * Collect variable(s) $_GET. 
+     *
+     * @return void
+     */
     private function getParams() : void {
 
         foreach($_GET as $k=>$v) {
@@ -44,7 +66,15 @@ class Request {
                 $this->params[$k] = $v;
         }
     }
-
+    
+    /**
+     * getListenerUrl
+     * 
+     * Handle Uri for application.
+     *
+     * @param  string $path
+     * @return string|RequestException
+     */
     private function getListenerUrl($path) {
 
         if(isset($path))
@@ -52,7 +82,14 @@ class Request {
         
         return throw new RequestException('Not Found Listener url variables.');
     }
-
+    
+    /**
+     * Data
+     *
+     * Abstract property of Request.
+     *
+     * @return array
+     */
     public function Data() : array {
 
         return [
@@ -64,6 +101,20 @@ class Request {
     }
 
 
+    //! ---------------------------------------------------------
+    //!                                                       .
+    //! This Element is not Functionnel -- In development -- /!\
+    //!
+    //! ---------------------------------------------------------
+
+        
+    /**
+     * init_varaibles_session
+     * 
+     * Init Session connection.
+     *
+     * @return void
+     */
     private function init_varaibles_session() {
 
         if(empty($this->session_data['permission'])) {
@@ -76,4 +127,5 @@ class Request {
             $this->session_data['user_name'] = 'guest';
         }
     }
+    //! ---------------------------------------------------------
 }

@@ -8,6 +8,6 @@ use Root22\Router\Router;
 
 $router = new Router;
 
-$router->GET('/', [HomeController::class, 'anyView'])->middleware(Admin::class);
+$router->GET('/', [HomeController::class, 'anyView'])->middleware(Guest::class);
 
 $router->GET('/a-propos', [HomeController::class, 'show'], 'home.about');

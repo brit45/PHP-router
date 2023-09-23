@@ -1,8 +1,10 @@
 <?php
 
+session_start();
+
 require 'vendor/autoload.php';
 require 'routes/route.php';
 
-session_start();
+const ROOT = __DIR__;
 
 $router->run(($argv??[]));

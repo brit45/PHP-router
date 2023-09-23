@@ -6,15 +6,13 @@ use Root22\Router\Router;
 
 class HomeController extends Controller {
 
-    public function anyView() {
+    public function anyView()  {
 
         // TODO
-        return [
-            
-            'Information' => 'Une petite page web de démonstration.'
-        ];
+        return $this->view('home.welcome');
     }
 
+    /**
     public function show() {
 
         // TODO
@@ -42,5 +40,5 @@ class HomeController extends Controller {
         return [];
 
     }
-
+    */
 }

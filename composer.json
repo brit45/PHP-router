@@ -27,9 +27,16 @@
         }
     ],
     "require": {
-	"php" : "^8.1"
+	"php" : "^8.1",
+        "philo/laravel-blade": "^3.1",
+        "symfony/error-handler": "^6.3"
     },
     "require-dev": {
         "larapack/dd": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": false
+        }
     }
 }
